@@ -39,6 +39,11 @@ randomly.
 
 if There's not enough tables, waiters or the restaurant is closed a ValidationError will be returned and the database entry will not be created
 
+### testing ###
+From the restaurant root folder run
+
+`python manage.py test`
+
 ## Part Three ##
 
 The tests for the problem are defined in the file `pdftesting`

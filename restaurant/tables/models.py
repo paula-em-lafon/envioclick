@@ -45,15 +45,11 @@ class Service(models.Model):
             table_obj = random.choice(available_tables)
             self.table = table_obj
 
-            print(time.time())
             # check if current time is open
-            if datetime.time(9,0) < time.time() and time.time()> datetime.time(21, 30):
+            if time.time() < datetime.time(9,0) or time.time()> datetime.time(23, 30):
                 raise ValidationError("The restaurant is closed")
-
-            print(time.time())
             # add timedelta to init_time
             if time.time() < datetime.time(17,0):
-                print(time + datetime.timedelta(minutes=90))
                 self.exit = time + datetime.timedelta(minutes=90)
             if time.time() > datetime.time(17,0):
                 self.exit = time + datetime.timedelta(minutes=120)
