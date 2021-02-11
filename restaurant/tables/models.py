@@ -17,7 +17,7 @@ class Service(models.Model):
     exit = models.DateTimeField(null=True, blank=True)
     waiter = models.ForeignKey('Waiter', on_delete=models.CASCADE, blank=True)
     table = models.ForeignKey('Table', on_delete=models.CASCADE, blank=True)
-    total_ammount= models.DecimalField(max_digits=15, decimal_places=2)
+    tip= models.DecimalField(max_digits=15, decimal_places=2)
     
     def save(self, *args, **kwargs):
         if self.id == None:
