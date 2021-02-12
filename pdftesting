@@ -1,6 +1,7 @@
 1.- Write pdf view is working well
-2.- The data being input into the PDF is correct
-3.- The PDF is sitting in the temporary storage necesry for sending
-4.- The Email is being created
-5.- The email contains the PDF
-6.- The email is recieved by the client services
+2.- If pdf is dependent on a template test the template
+3.- The data being input into the PDF is correct
+4.- The PDF is sitting in the temporary storage necesry for sending
+5.- The Email is being created
+6.- The email contains the PDF
+7.- The email is recieved by the client services
