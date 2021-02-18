@@ -39,12 +39,27 @@ randomly.
 
 if There's not enough tables, waiters or the restaurant is closed a ValidationError will be returned and the database entry will not be created
 
-### testing ###
+### Testing ###
 From the restaurant root folder run
 
 `python manage.py test`
 
-## Part Three ##
+# Part two with the Flask App #
+
+I recognize my solution is a bit hacky. When making an app I usually use other people0s boilerplate.
+
+to runPart two with the Flask App ## the shell:
+
+`python app.py shell`
+`from models.py import db, Service, Table, Waiter`
+`service1 = Service(tip=90.90)`
+
+### Testing ###
+
+`python -m unittest discover -p testing.py`
+
+
+# Part Three #
 
 The tests for the problem are defined in the file `pdftesting`
 
