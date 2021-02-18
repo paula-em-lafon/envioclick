@@ -1,4 +1,7 @@
-from __main__ import app
+try:
+    from app import app as app
+except ImportError:
+    from __main__ import app
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.sql.functions import func
 from sqlalchemy.exc import IntegrityError
