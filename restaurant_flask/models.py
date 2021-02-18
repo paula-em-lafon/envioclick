@@ -31,14 +31,12 @@ class Service(db.Model):
         waiters = db.session.query(Waiter, func.count(Service.id).\
             filter(Service.exit>time)).\
                 outerjoin(Service).group_by(Waiter).all()
-        print(waiters)
         available_waiters= [i for i in waiters if i[1] < 4]
         available_waiters_length = len(available_waiters)
         # Check for tables
         tables = db.session.query(Table, func.count(Table.id).\
             filter(Service.exit>time)).\
                 outerjoin(Service).group_by(Table).all()
-        print(tables)
         available_tables= [i for i in tables if i[1] < 1]
         available_tables_length = len(available_tables)
         #check if available 
